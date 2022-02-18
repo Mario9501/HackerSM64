@@ -26,6 +26,7 @@ enum crashPages {
     PAGE_DISASM,
     PAGE_ASSERTS,
     PAGE_CONTROLS,
+    PAGE_EMULATOR,
     PAGE_COUNT
 };
 
@@ -54,7 +55,7 @@ u8 crashPage = 0;
 u8 updateBuffer = TRUE;
 
 
-char *gCauseDesc[18] = {
+char *gCauseDesc[19] = {
     "Interrupt",
     "TLB modification",
     "TLB exception on load",
@@ -73,6 +74,7 @@ char *gCauseDesc[18] = {
     "Floating point exception",
     "Watchpoint exception",
     "Virtual coherency on data",
+    "Playing on emulator.",
 };
 
 char *gFpcsrDesc[6] = {
@@ -450,6 +452,25 @@ void draw_assert(UNUSED OSThread *thread) {
 
     osWritebackDCacheAll();
 }
+void draw_crash_reason(UNUSED OSThread *thread, s32 cause) {
+    crash_screen_print(30, 20, "CRASH REASON:");
+    //State to play on real hardware.
+    if (gIsConsole==0) {
+    crash_screen_print(30, 40, "@FF0FFFFFCAUSE!: gIsConsole=%d",gIsConsole);
+    crash_screen_print(30, 30, "@FF0000FFThis Romhack is made for REAL N64 Hardware.");
+    }
+    //If on a real N64 display the cause.
+    else{
+        crash_screen_print(30, 30, "Something happened that shouldn't have occured!");
+        crash_screen_print(30, 40, "@7FFFFFFFCause:%s",gCauseDesc[cause]); //State the reason for the crash
+    }
+    //Contact info!
+    crash_screen_print(30, 50, "@7F7FFFFFDiscord:"); // Discord color.
+    crash_screen_print(80, 50, "@FF0000FFMario9501#9501"); // Discord Username
+    crash_screen_print(30, 60, "@9F9F2FFFEmail:"); // Email Color
+    crash_screen_print(67, 60, "@1FFF2FFFJgmario9501(a)gmail.com"); // Email
+    osWritebackDCacheAll(); // Write to the crash screen.
+}
 
 extern void warp_special(s32 arg);
 
@@ -612,6 +633,7 @@ void draw_crash_screen(OSThread *thread) {
                 case PAGE_DISASM:     draw_disasm(thread); break;
                 case PAGE_ASSERTS:    draw_assert(thread); break;
                 case PAGE_CONTROLS:   draw_controls(thread); break;
+                case PAGE_EMULATOR:   draw_crash_reason(thread, cause); break;
             }
         }
 

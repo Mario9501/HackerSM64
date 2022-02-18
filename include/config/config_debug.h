@@ -52,4 +52,4 @@
 // #define VANILLA_DEBUG
 
 // Forces a crash when the game starts. Useful for debugging the crash screen.
-// #define DEBUG_FORCE_CRASH_ON_BOOT
+//#define DEBUG_FORCE_CRASH_ON_BOOT

@@ -5,13 +5,13 @@
  ********************/
 
 // Enables Goddard (the Mario head).
-#define KEEP_MARIO_HEAD
+//#define KEEP_MARIO_HEAD
 
 // Enables the Goddard easter egg from Shindou (has no effect if KEEP_MARIO_HEAD is disabled).
-#define GODDARD_EASTER_EGG
+//#define GODDARD_EASTER_EGG
 
 // Disables the demo that plays when idle on the start screen (has no effect if KEEP_MARIO_HEAD is disabled).
-#define DISABLE_DEMO
+//#define DISABLE_DEMO
 
 // Enables Goddard debug print (only has an effect if ISVPRINT or UNF are enabled).
 // #define GODDARD_DEBUG_PRINTF
