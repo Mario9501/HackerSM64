@@ -27,22 +27,22 @@
 // #define NO_SLEEP
 
 // Disables fall damage.
-#define NO_FALL_DAMAGE
+// #define NO_FALL_DAMAGE
 
 // Disables the scream that mario makes when falling off a great height (this is separate from actual fall damage).
 // #define NO_FALL_DAMAGE_SOUND
 
 // Fall height for normal fall damage. Vanilla is 1150.0f.
-#define FALL_DAMAGE_HEIGHT_SMALL 1150.0f
+#define FALL_DAMAGE_HEIGHT_SMALL 2500.0f
 
 // Fall height for double fall damage. Vanilla is 3000.0f.
-#define FALL_DAMAGE_HEIGHT_LARGE 3000.0f
+#define FALL_DAMAGE_HEIGHT_LARGE 6000.0f
 
 // Disables Mario getting stuck in snow and sand when falling.
 // #define NO_GETTING_BURIED
 
 // Prevents hands-free holding.
-// #define HANDS_FREE_HOLDING_FIX
+ #define HANDS_FREE_HOLDING_FIX
 
 // Prevents Mario from losing his cap.
 // #define PREVENT_CAP_LOSS
@@ -69,16 +69,16 @@
 #define HANGING_FIX
 
 // The last frame after hitting a wall that will be considered a firsty when wallkicking.
-#define FIRSTY_LAST_FRAME 1
+#define FIRSTY_LAST_FRAME 0
 
 // The maximum angle the player can wall kick, in degrees. 0..90. To allow 45 degree wall kicks, you must supply `46` to allow 45 and under.
-#define WALL_KICK_DEGREES 45
+#define WALL_KICK_DEGREES 35
 
 // This is vanilla behavior, disable it to allow ledge grabbing regardless of floor pitch.
 // #define LEDGE_GRABS_CHECK_SLOPE_ANGLE
 
 // Disables BLJs and crushes SimpleFlips's dreams.
-// #define DISABLE_BLJ
+ #define DISABLE_BLJ
 
 // Re-enables upwarping when entering water. Forces you to only enter water from the top.
 // #define WATER_PLUNGE_UPWARP
