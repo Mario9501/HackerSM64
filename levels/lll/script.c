@@ -95,6 +95,7 @@ const LevelScript level_lll_entry[] = {
 	LOAD_MODEL_FROM_GEO(MODEL_WDW_WATER_LEVEL_DIAMOND, water_level_diamond_geo), 
 	LOAD_MODEL_FROM_GEO(MODEL_WDW_WATER_LEVEL_DIAMOND, water_level_diamond_geo), 
 	LOAD_MODEL_FROM_GEO(MODEL_WDW_WATER_LEVEL_DIAMOND, water_level_diamond_geo), 
+	LOAD_MODEL_FROM_GEO(MODEL_WDW_WATER_LEVEL_DIAMOND, water_level_diamond_geo), 
 
 	/* Fast64 begin persistent block [level commands] */
 		LOAD_MODEL_FROM_GEO(MODEL_WDW_WATER_LEVEL_DIAMOND, water_level_diamond_geo),
