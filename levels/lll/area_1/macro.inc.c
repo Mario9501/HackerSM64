@@ -1,5 +1,5 @@
 const MacroObject lll_area_1_macro_objs[] = {
-	MACRO_OBJECT_WITH_BEH_PARAM(macro_blue_coin_switch, 0, 5100, -100, -6000, 0x00000000),
+	MACRO_OBJECT_WITH_BEH_PARAM(macro_blue_coin_switch, 0, 4300, 2500, -6100, 0x00000000),
 	MACRO_OBJECT_WITH_BEH_PARAM(macro_hidden_blue_coin, 0, 4400, 2500, -5900, 0x00000000),
 	MACRO_OBJECT_WITH_BEH_PARAM(macro_hidden_blue_coin, 0, 4100, 2200, -4700, 0x00000000),
 	MACRO_OBJECT_WITH_BEH_PARAM(macro_hidden_blue_coin, 0, 4800, 2200, -4700, 0x00000000),
