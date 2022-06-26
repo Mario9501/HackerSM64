@@ -294,8 +294,4 @@ extern const Gfx wooden_signpost_seg3_dl_0302DCD0[];
 extern const Gfx wooden_signpost_seg3_dl_0302DD08[];
 extern const Collision wooden_signpost_seg3_collision_0302DD80[];
 
-// water_level_diamond
-extern const GeoLayout water_level_diamond_geo[];
-extern const Gfx wdw_seg7_dl_070130F8[];
-extern const Gfx wdw_seg7_dl_070131B8[];
 #endif

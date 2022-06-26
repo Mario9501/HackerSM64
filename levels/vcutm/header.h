@@ -20,7 +20,4 @@ extern const Collision vcutm_seg7_collision_0700AC44[];
 // script
 extern const LevelScript level_vcutm_entry[];
 
-
-#include "levels/vcutm/header.inc.h"
-
 #endif

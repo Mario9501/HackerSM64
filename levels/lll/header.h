@@ -128,7 +128,4 @@ extern const Gfx lll_dl_lavafall_volcano[];
 // script
 extern const LevelScript level_lll_entry[];
 
-
-#include "levels/lll/header.inc.h"
-
 #endif

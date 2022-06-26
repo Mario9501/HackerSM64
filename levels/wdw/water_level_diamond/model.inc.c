@@ -1,5 +1,4 @@
 // 0x07012F18 - 0x07012F30
-
 static const Lights1 wdw_seg7_lights_07012F18 = gdSPDefLights1(
     0x99, 0x99, 0x00,
     0xff, 0xff, 0x00, 0x28, 0x28, 0x28
@@ -23,9 +22,6 @@ static const Lights1 wdw_seg7_lights_07012F60 = gdSPDefLights1(
     0xff, 0x00, 0x00, 0x28, 0x28, 0x28
 );
 
-ALIGNED8 static const Texture wdw_seg7_texture_07001000[] = {
-#include "levels/wdw/2.rgba16.inc.c"
-};
 // 0x07012F78 - 0x07012FD8
 static const Vtx wdw_seg7_vertex_07012F78[] = {
     {{{   -50,     51,    -50}, 0, {   990,      0}, {0xa6, 0x58, 0x00, 0xff}}},
@@ -67,7 +63,7 @@ static const Vtx wdw_seg7_vertex_07013098[] = {
 };
 
 // 0x070130F8 - 0x070131B8
-const Gfx wdw_seg7_dl_070130F8[] = {
+static const Gfx wdw_seg7_dl_070130F8[] = {
     gsDPSetTextureImage(G_IM_FMT_RGBA, G_IM_SIZ_16b, 1, wdw_seg7_texture_07001000),
     gsDPLoadSync(),
     gsDPLoadBlock(G_TX_LOADTILE, 0, 0, 32 * 32 - 1, CALC_DXT(32, G_IM_SIZ_16b_BYTES)),
