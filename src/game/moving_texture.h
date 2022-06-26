@@ -83,6 +83,7 @@ extern f32 gPaintingMarioYEntry;
 #define WF_MOVTEX_WATER                             (   1 | MOVTEX_AREA_WF)
 #define CASTLE_COURTYARD_MOVTEX_STAR_STATUE_WATER   (   1 | MOVTEX_AREA_CASTLE_COURTYARD)
 #define TTM_MOVTEX_PUDDLE                           (   1 | MOVTEX_AREA_TTM)
+#define LL_MOVTEX_AREA1_WATER                       (   1 | MOVTEX_AREA_LLL)    
 
 // Non-colored, unique movtex meshes (drawn in level geo)
 #define MOVTEX_PYRAMID_SAND_PATHWAY_FRONT (1 | MOVTEX_AREA_SSL)
