@@ -49,8 +49,22 @@ const LevelScript level_ssl_entry[] = {
 	/* Fast64 end persistent block [level commands] */
 
 	AREA(1, ssl_area_1),
+		WARP_NODE(0x05, LEVEL_SSL, 0x02, 0x01, WARP_NO_CHECKPOINT),
+		OBJECT(MODEL_NONE, 3897, 1419, 3182, 0, 0, 0, 0x00000000, bhvHidden1upInPoleTrigger),
+		OBJECT(MODEL_NONE, 3897, 1621, 3182, 0, 0, 0, 0x00000000, bhvHidden1upInPoleTrigger),
+		OBJECT(MODEL_NONE, 3897, 1719, 3182, 0, 0, 0, 0x00000000, bhvHidden1upInPoleSpawner),
 		OBJECT(MODEL_NONE, -162, 1245, 114, 0, 0, 0, 0x000A0000, bhvAirborneWarp),
-		MARIO_POS(0x01, 0, -162, 339, 114),
+		MARIO_POS(0x01, 0, -162, 440, 114),
+		OBJECT(MODEL_SSL_PALM_TREE, -4844, 0, 8104, 0, 0, 0, 0x00000000, bhvTree),
+		OBJECT(MODEL_SSL_PALM_TREE, -5307, 0, 7171, 0, 0, 0, 0x00000000, bhvTree),
+		OBJECT(MODEL_SSL_PALM_TREE, -8207, 0, 7916, 0, 0, 0, 0x00000000, bhvTree),
+		OBJECT(MODEL_SSL_PALM_TREE, -7704, 0, 8437, 0, 0, 0, 0x00000000, bhvTree),
+		OBJECT(MODEL_SSL_PALM_TREE, -7203, 0, 8975, 0, 0, 0, 0x00000000, bhvTree),
+		OBJECT(MODEL_SSL_PALM_TREE, -3063, 661, 4590, 0, 0, 0, 0x00000000, bhvTree),
+		OBJECT(MODEL_SSL_PALM_TREE, 3897, 1216, 3182, 0, 0, 0, 0x00000000, bhvTree),
+		OBJECT(MODEL_SSL_PALM_TREE, -1798, 832, 4589, 0, 0, 0, 0x00000000, bhvTree),
+		OBJECT(MODEL_NONE, 8201, 3077, -4977, 0, 0, 0, 0x02000000, bhvHiddenRedCoinStar),
+		OBJECT(MODEL_CASTLE_GROUNDS_WARP_PIPE, -770, 440, 650, 0, 0, 0, 0x00050000, bhvWarpPipe),
 		TERRAIN(ssl_area_1_collision),
 		MACRO_OBJECTS(ssl_area_1_macro_objs),
 		SET_BACKGROUND_MUSIC(0x00, SEQ_LEVEL_HOT),
@@ -59,8 +73,19 @@ const LevelScript level_ssl_entry[] = {
 		/* Fast64 end persistent block [area commands] */
 	END_AREA(),
 
+	AREA(2, ssl_area_2),
+		WARP_NODE(0x01, LEVEL_SSL, 0x01, 0x05, WARP_NO_CHECKPOINT),
+		OBJECT(MODEL_CASTLE_GROUNDS_WARP_PIPE, -183, -189, -11, 0, 0, 0, 0x00010000, bhvWarpPipe),
+		TERRAIN(ssl_area_2_collision),
+		MACRO_OBJECTS(ssl_area_2_macro_objs),
+		SET_BACKGROUND_MUSIC(0x00, SEQ_LEVEL_UNDERGROUND),
+		TERRAIN_TYPE(TERRAIN_STONE),
+		/* Fast64 begin persistent block [area commands] */
+		/* Fast64 end persistent block [area commands] */
+	END_AREA(),
+
 	FREE_LEVEL_POOL(),
-	MARIO_POS(0x01, 0, -162, 339, 114),
+	MARIO_POS(0x01, 0, -162, 440, 114),
 	CALL(0, lvl_init_or_update),
 	CALL_LOOP(1, lvl_init_or_update),
 	CLEAR_LEVEL(),

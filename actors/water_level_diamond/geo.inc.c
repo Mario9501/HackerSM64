@@ -1,6 +1,6 @@
 // 0x0E0005C0
-const GeoLayout wdw_geo_0005C0[] = {
-   GEO_CULLING_RADIUS(200),
+const GeoLayout water_level_diamond_geo[] = {
+   GEO_CULLING_RADIUS(1200),
    GEO_OPEN_NODE(),
       GEO_SHADOW(SHADOW_SQUARE_SCALABLE, 0x96, 90),
       GEO_OPEN_NODE(),

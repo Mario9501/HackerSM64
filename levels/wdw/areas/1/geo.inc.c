@@ -17,8 +17,6 @@ const GeoLayout wdw_geo_000658[] = {
             GEO_OPEN_NODE(),
                GEO_DISPLAY_LIST(LAYER_OPAQUE,            wdw_seg7_dl_07009AB0),
                GEO_DISPLAY_LIST(LAYER_ALPHA,             wdw_seg7_dl_0700A138),
-               GEO_DISPLAY_LIST(LAYER_TRANSPARENT,       wdw_seg7_dl_07012798),
-               GEO_DISPLAY_LIST(LAYER_TRANSPARENT_DECAL, wdw_seg7_dl_07012908),
                GEO_ASM(0,                      geo_wdw_set_initial_water_level),
                GEO_ASM(0,                      geo_movtex_pause_control),
                GEO_ASM(WDW_MOVTEX_AREA1_WATER, geo_movtex_draw_water_regions),
